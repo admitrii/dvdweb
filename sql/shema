@@ -1,0 +1,27 @@
+-- create table
+create table user (
+	uid serial primary key,
+	login varchar(200),
+	password varchar(200)
+);
+
+create table disk (
+	uid serial primary key,
+	user_id int not null references client(uid),
+	name varchar(200),
+	hold_user int not null references client(uid)
+);
+
+-- add new client
+insert into user (login) values ('petr');
+insert into user (login) values ('vasya');
+insert into user (login) values ('kolya');
+
+-- add new pet
+insert into disk (user_id, name, hold_user) values (1, 'titanik', 1);
+insert into disk (user_id, name, hold_user) values (1, 'doom', 2);
+insert into disk (user_id, name, hold_user) values (2, 'halflife', 2);
+insert into disk (user_id, name, hold_user) values (2, 'matrix', 3);
+insert into disk (user_id, name, hold_user) values (3, 'tarzan', 3);
+insert into disk (user_id, name, hold_user) values (3, 'holms', 3);
+
