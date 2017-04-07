@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="dvdweb:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="dvdweb-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="dvdweb:war exploded" />
+    </root>
+  </artifact>
+</component>

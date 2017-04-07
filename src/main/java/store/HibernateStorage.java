@@ -76,7 +76,7 @@ public class HibernateStorage {
         final Session session = factory.openSession();
         Transaction tx = session.beginTransaction();
         try {
-            final Query query = session.createQuery("from User as user where user.login=:login");
+            final Query query = session.createQuery("from UserImpl as user where user.login=:login");
             query.setString("login", login);
             return (User) query.iterate().next();
         } finally {
